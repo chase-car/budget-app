@@ -102,4 +102,7 @@ button.danger{
   color:var(--muted);
   cursor:pointer;
 }
+
+/* Makes income green */
+.transactions .amount.positive {color:var(--success);}
 .muted{color:var(--muted);font-size:0.95rem}

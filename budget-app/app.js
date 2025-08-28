@@ -126,11 +126,13 @@ function renderTransactions(){
     const display = formatCents(tx.amountCents);
     if (tx.type === 'income') {
       amountDiv.textContent = `+${display}`;
+      amountDiv.classList.add('positive');
       amountDiv.classList.remove('negative');
       totalIncome += tx.amountCents;
     } else {
       amountDiv.textContent = `-${display}`;
       amountDiv.classList.add('negative');
+      amountDiv.classList.remove('positive');
       totalExpenses += tx.amountCents;
     }
 
