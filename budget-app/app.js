@@ -98,6 +98,14 @@ function renderTransactions(){
   let totalIncome = 0;
   let totalExpenses = 0;
 
+  document.getElementById('total-income').textContent = formatCents(totalIncome);
+  document.getElementById('total-expenses').textContent = formatCents(totalExpenses);
+
+  // Apply color classes
+  document.getElementById('total-income').classList.add('total-income');
+  document.getElementById('total-expenses').classList.add('total-expenses');
+
+
   // show newest first
   const sorted = transactions.slice().sort((a,b) => {
     // compare by date, then createdAt
