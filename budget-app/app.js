@@ -162,6 +162,7 @@ function renderTransactions(){
   const balanceEl = document.getElementById('balance');
   balanceEl.textContent = formatCents(balanceCents);
   balanceEl.classList.toggle('negative', balanceCents < 0);
+  balanceEl.classList.toggle('positive', balanceCents > 0);
 }
 
 function formatCents(cents){

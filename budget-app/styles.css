@@ -32,7 +32,14 @@ body{
   font-size:1.1rem;
   padding:0.25rem 0.5rem;
 }
-.balance.negative{color:var(--danger)}
+
+.balance.negative {
+  color: var(--danger);
+}
+
+.balance.positive {
+  color: var(--success);
+}
 
 .container{
   max-width:760px;
@@ -95,7 +102,6 @@ button.danger{
 .transactions .desc{font-weight:600}
 .transactions .date{font-size:0.85rem;color:var(--muted)}
 .transactions .amount{font-weight:700}
-.transactions .amount.negative{color:var(--danger)}
 .transactions button{
   background:transparent;
   border:0;
@@ -103,6 +109,25 @@ button.danger{
   cursor:pointer;
 }
 
-/* Makes income green */
-.transactions .amount.positive {color:var(--success);}
+/*Makes total income green */
+.total-income {
+  color: var(--success);
+  font-weight: 700;
+}
+
+/*Makes total expenses red */
+.total-expenses {
+  color: var(--danger);
+  font-weight: 700;
+}
+
+
+.amount.positive {
+  color: var(--success);
+}
+
+.amount.negative {
+  color: var(--danger);
+}
+
 .muted{color:var(--muted);font-size:0.95rem}
