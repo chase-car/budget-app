@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Simple Budget App</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>Simple Budget</h1>
+    <div id="balance" class="balance" aria-live="polite">$0.00</div>
+  </header>
+
+  <main class="container">
+    <!-- Add transaction form -->
+    <section class="card">
+      <form id="transaction-form">
+        <label>
+          Date
+          <input type="date" id="date" required />
+        </label>
+
+        <label>
+          Type
+          <select id="type">
+            <option value="expense">Expense</option>
+            <option value="income">Income</option>
+          </select>
+        </label>
+
+        <label>
+          Amount
+          <input id="amount" type="number" step="0.01" placeholder="0.00" required />
+        </label>
+
+        <label>
+          Description
+          <input id="description" type="text" placeholder="Coffee, paycheck, etc." />
+        </label>
+
+        <div class="form-row">
+          <button type="submit" id="add-btn">Add transaction</button>
+          <button type="button" id="reset-btn" class="danger">Reset data</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Totals -->
+    <section class="card summary">
+      <div>Income: <strong id="total-income">$0.00</strong></div>
+      <div>Expenses: <strong id="total-expenses">$0.00</strong></div>
+    </section>
+
+    <!-- Transaction list -->
+    <section class="card">
+      <h2>Transactions</h2>
+      <ul id="transactions-list" class="transactions"></ul>
+      <p id="no-transactions" class="muted">No transactions yet — add one above.</p>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

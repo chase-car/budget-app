@@ -1,0 +1,105 @@
+:root{
+  --bg: #f5f7fb;
+  --card: #fff;
+  --accent: #2b90ff;
+  --danger: #ff5b5b;
+  --text: #0f1723;
+  --muted: #6b7280;
+  --success: #10b981;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial;
+  background:var(--bg);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+}
+
+.header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:1rem;
+  background:linear-gradient(90deg,var(--card),#eef6ff);
+  border-bottom:1px solid #e6eef9;
+}
+.header h1{margin:0;font-size:1.25rem}
+.balance{
+  font-weight:700;
+  font-size:1.1rem;
+  padding:0.25rem 0.5rem;
+}
+.balance.negative{color:var(--danger)}
+
+.container{
+  max-width:760px;
+  margin:1.2rem auto;
+  padding:0 1rem;
+}
+
+.card{
+  background:var(--card);
+  border-radius:8px;
+  padding:1rem;
+  box-shadow:0 1px 2px rgba(16,24,40,0.03);
+  margin-bottom:1rem;
+}
+
+label{
+  display:block;
+  font-size:0.9rem;
+  margin-bottom:0.5rem;
+}
+input[type="text"], input[type="number"], input[type="date"], select{
+  width:100%;
+  padding:0.5rem;
+  border:1px solid #e6eef9;
+  border-radius:6px;
+  margin-top:0.25rem;
+  font-size:0.95rem;
+}
+
+.form-row{
+  display:flex;
+  gap:0.5rem;
+  margin-top:0.6rem;
+}
+button{
+  padding:0.6rem 0.8rem;
+  border:0;
+  border-radius:6px;
+  background:var(--accent);
+  color:white;
+  cursor:pointer;
+  font-weight:600;
+}
+button.danger{
+  background:var(--danger);
+}
+.summary{
+  display:flex;
+  justify-content:space-between;
+  gap:1rem;
+}
+.transactions{list-style:none;padding:0;margin:0}
+.transactions li{
+  display:flex;
+  justify-content:space-between;
+  padding:0.5rem 0;
+  border-bottom:1px solid #f1f5f9;
+}
+.transactions .left{max-width:70%}
+.transactions .desc{font-weight:600}
+.transactions .date{font-size:0.85rem;color:var(--muted)}
+.transactions .amount{font-weight:700}
+.transactions .amount.negative{color:var(--danger)}
+.transactions button{
+  background:transparent;
+  border:0;
+  color:var(--muted);
+  cursor:pointer;
+}
+.muted{color:var(--muted);font-size:0.95rem}
