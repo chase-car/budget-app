@@ -12,6 +12,12 @@
     <div id="balance" class="balance" aria-live="polite">$0.00</div>
   </header>
 
+      <!-- Totals -->
+    <section class="card summary">
+      <div>Income: <strong id="total-income">$0.00</strong></div>
+      <div>Expenses: <strong id="total-expenses">$0.00</strong></div>
+    </section>
+
   <main class="container">
     <!-- Add transaction form -->
     <section class="card">
@@ -36,25 +42,22 @@
 
         <label>
           Description
-          <input id="description" type="text" placeholder="Panda Express, paycheck, etc." />
+          <input id="description" type="text" placeholder="Rent, paycheck, etc." />
         </label>
 
         <div class="form-row">
           <button type="submit" id="add-btn">Add transaction</button>
-          <button type="button" id="reset-btn" class="danger">Reset data</button>
         </div>
       </form>
     </section>
 
-    <!-- Totals -->
-    <section class="card summary">
-      <div>Income: <strong id="total-income">$0.00</strong></div>
-      <div>Expenses: <strong id="total-expenses">$0.00</strong></div>
-    </section>
-
     <!-- Transaction list -->
     <section class="card">
-      <h2>Transactions</h2>
+      <div class="transactions-header">
+        <h2>Transactions</h2>
+        <button id="reset-btn" class="danger">Clear</button>
+      </div>
+
       <ul id="transactions-list" class="transactions"></ul>
       <p id="no-transactions" class="muted">No transactions yet — add one above.</p>
     </section>
